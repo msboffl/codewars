@@ -1,6 +1,16 @@
-export function sumTwoSmallestNumbers(numbers:Array<number>):number {  
-  numbers.sort((a, b) => a - b);
-  
-  return numbers[0] + numbers[1];
-  //Code here
+export function sumTwoSmallestNumbers(numbers: number[]): number {
+  let first = +Infinity;
+  let second = +Infinity;
+​
+  for (let num of numbers) {
+    if (num <= first) {
+      second = first;
+      first = num;
+    } else if (num < second) {
+      second = num;
+    }
+  }
+​
+  return first + second;
 }
+​
