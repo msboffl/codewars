@@ -1,4 +1,4 @@
 function evenOrOdd(number) {
-  if(number % 2 === 0) return 'Even';
+  if((number & 1) === 0) return 'Even';
   return 'Odd';
 }
