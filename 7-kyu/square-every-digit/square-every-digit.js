@@ -1,11 +1,15 @@
 function squareDigits(num){
-  let digit = ''
+  if(num == 0) return 0;
   
+  let ans = "";
   while(num > 0) {
     let ld = num % 10;
-    digit = (ld * ld) + digit
+    let sq = ld * ld
+    
+    ans = sq + ans;
+    
     num = Math.floor(num / 10);
   }
   
-  return Number(digit);
+  return Number(ans);
 }
